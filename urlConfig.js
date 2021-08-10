@@ -1,4 +1,6 @@
-export const api='http://localhost:2000/api';
+const baseApi=location.hostname==='localhost'?"http://localhost:2000":" https://flipkart-back-end-app.herokuapp.com"
+
+export const api=`${baseApi}/api`;
 export const generatePublicUrl=(fileName)=>{
-    return  `http://localhost:2000/public/${fileName}`
+    return  `${baseApi}/${fileName}`
 }
